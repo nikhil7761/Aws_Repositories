@@ -1,0 +1,19 @@
+Resources:
+  MyEC2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: ami-03bb6d83c60fc5f7c
+      InstanceType: t2.micro 
+      KeyName: nick_234  
+      SecurityGroupIds:
+        - sg-08de41b9f8c57b240
+        - sg-08de41b9f8c57b240
+        - sg-0f997a2bccdd47644
+        - sg-0f14baf06482f8824
+      BlockDeviceMappings:
+        - DeviceName: /dev/xvda
+          Ebs: 
+            VolumeSize: 8
+            VolumeType: gp2
+      UserData: |
+        IyEvYmluL2Jhc2gKZWNobyAiSGVsbG8sIFdvcmxkISIgPiBpbmRleC5odG1sCm5vaHVwIHB5dGhvbiAtbSBTaW1wbGVIVFRQU2VydmVyIDgwICY=
